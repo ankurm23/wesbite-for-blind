@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="login.html"  >
+  
+    <div class="form_content">
+        <br>
+        <label for="fname">Enter Elector's name</label><br>
+        <input type="text" id="zname"  placeholder="FirstName" required>
+        <input type="text" id="yname" placeholder="MiddleName" required>
+        <input type="text" id="xname" placeholder="LastName" required>
+        
+        
+        
+        <br><br>
+        <div class="dobpin">
+        <label for="dob"> DOB</label>
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<label  for="fname"> Gender</label><br>
+        <input type="text" id="dob" name="dob" placeholder="DOB" required>
+
+        
+        &ensp;&ensp;&ensp;&ensp;<input type="text" id="gen" name="gender" placeholder="Gender" required>
+        
+        <br><br>
+        <label for="state"> State</label>
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<label  for="pin code"> Pin code</label><br>
+        <input type="text" id="state" name="state" placeholder="State" required>
+
+        
+        &ensp;&ensp;&ensp;&ensp;<input type="text" id="pincode" name="pincode" placeholder="Pincode" required>
+        </div>
+        
+        <div class="contactmail">
+        <br>
+        <label for="voter id"> Voter ID:</label><br>
+        
+       <input type="text" id="voter id" name="voter id" placeholder="Voter ID" required><br>
+
+       <label class="s" for="adhar no"> Aadhar No.:</label><br>
+       <input type="text" id="Adhar" name="Adhar" placeholder="Aadhar No." required>
+        <br><br>
+
+        <label for="fname">Enter Contact No</label><br>
+        <input type="text" id="Contact" name="Contact" placeholder="Contact No" required >
+        <br><br>
+        <label for="fname">Enter Email Id</label><br>
+        <input type="email" id="email" name="email" placeholder="Email Id" required >
+        </div>
+        <br>
+        <div class="dobpin">
+        <label for="Password"> Password</label>
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<label  for="re-enter"> Re-Enter Password</label><br>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+
+        
+        &ensp;&ensp;&ensp;&ensp;&ensp;<input type="password" id="re-enter" name="Re-Enter" placeholder="Re-Enter Password" required>
+        <br>
+        <div class="checkbox">
+
+        <input type="checkbox" id="check"required>I agree to all <b> Terms and Conditions </b>  
+         </div>
+         <br><br>
+         <div class="btn1">
+         &ensp;&ensp;&ensp; &ensp;&ensp;&ensp;  <button class=btn> Register</button>
+        </div>
+        <p>
+           <b> Note:-</b>All the information should be filled according to <b> Valid UID </b> or <b> Voter-ID</b>.
+        </p>
+
+
+
+    </div>
+    </form> 
+
+    
+        <script src="annyang.min.js"></script>
+        <script>
+            if (annyang) {
+              // Let's define our first command. First the text we expect, and then the function it should call
+              var commands = {
+                'first name *tag': function(variable){
+                    let fname = document.getElementById("fname");
+                    fname.value = variable;
+    
+                },
+                
+                    ' middle name *tag': function(variable){
+                        let mname = document.getElementById("mname");
+                        mname.value = variable;
+        
+                },
+                    ' last name *tag': function(variable){
+                        let lname = document.getElementById("lname");
+                        lname.value = variable;
+        
+                },
+                    ' DOB *tag': function(variable){
+                        let dob = document.getElementById("dob");
+                        dob.value = variable;
+                        
+                },
+                    ' Gender *tag': function(variable){
+                        let gen = document.getElementById("gen");
+                        gen.value = variable;
+                },
+                    ' State *tag': function(variable){
+                        let state = document.getElementById("state");
+                        gen.value=variable;
+                },
+                ' Pin code *tag': function(variable){
+                        let pincode = document.getElementById("pincode");
+                        gen.value=variable;
+                },    
+                ' Voter id *tag': function(variable){
+                        let Voterid= document.getElementById("voterid");
+                        gen.value=variable;
+                },     
+                ' Adharno *tag': function(variable){
+                        let Adhar= document.getElementById("Adhar");
+                        gen.value=variable;
+                },  
+                ' Contact no *tag': function(variable){
+                        let Contact= document.getElementById("Contact");
+                        gen.value=variable;
+                },   
+                ' Email id *tag': function(variable){
+                        let email= document.getElementById("email");
+                        gen.value=variable;  
+                }, 
+                ' password *tag': function(variable){
+                        let password= document.getElementById("password");
+                        gen.value=variable;  
+                }, 
+                ' reenter *tag': function(variable){
+                        let reenter= document.getElementById("reenter");
+                        gen.value=variable;  
+                }, 
+             
+                ' checkbox *tag': function(variable){
+                        let check= document.getElementById("check");
+                        gen.value=variable; 
+                }, 
+   
+
+                
+                };
+              
+            
+              // Add our commands to annyang
+            annyang.addCommands(commands);
+            
+              // Start listening. You can call this here, or attach this call to an event, button, etc.
+              annyang.start();
+        }
+    
+            </script>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
